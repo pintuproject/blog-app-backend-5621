@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 const app = express();
 const corsId={
-  origin:"http://localhost:3000"
+  origin:"https://blog-app-5621.netlify.app/"
 }
  
 app.use(cors(corsId));
