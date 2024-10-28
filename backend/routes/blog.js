@@ -14,7 +14,7 @@ const detectLocation = require("../middleware/DetectLocation");
 const router = express.Router();
 
 router.post('/blogs', authMiddleware, detectLocation, createBlog);
-router.get('/blogs', detectLocation, getBlogs);
+router.get('/blogs', getBlogs);
 router.get('/blogs/:id', getBlogById);
 router.post('/blogs/:id/likes', likeBlog);
 router.post('/blogs/:id/comments', addComment);
