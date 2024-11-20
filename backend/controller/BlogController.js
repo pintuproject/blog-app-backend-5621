@@ -21,8 +21,13 @@ exports.createBlog = async (req, res) => {
 
 exports.getBlogs = async (req, res) => {
   try {
+    const start=new Date()
+    const startTime=start.getSeconds()
     const blogs = await Blog.find()
    return res.status(200).json(blogs);
+   const end=new Date()
+   const endTime=end.getSeconds()
+   console.log("time is ",endTime-startTime)
      
   } catch (error) {
    return  res.status(500).json({ error: "Error fetching blogs" });
